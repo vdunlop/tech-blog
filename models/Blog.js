@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Create Project model and datatypes, including the user_id foreign key.
-class Project extends Model {}
+// Create Blog model and datatypes, including the user_id foreign key.
+class Blog extends Model {}
 
-Project.init(
+Blog.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -41,8 +41,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'Blog',
   }
 );
 
-module.exports = Project;
+module.exports = Blog;

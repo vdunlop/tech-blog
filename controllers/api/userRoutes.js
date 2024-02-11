@@ -1,4 +1,6 @@
+// Import just the router express
 const router = require('express').Router();
+
 // Import the User model from the models folder
 const { User } = require('../../models');
 
@@ -18,7 +20,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// If a POST request is made to /api/users/login, the function checks to see if the user information matches the information in the database and logs the user in. If correct, the user ID and logged-in state are saved to the session within the request object.
+// If a POST request is made to /api/users/login (from controllers/api, js code), the function checks to see if the user information matches the information in the database and logs the user in. 
+// If correct, the user ID and logged-in state are saved to the session within the request object.
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -41,8 +44,8 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.logged_in = true;
-      
+      req.session.logged_in = true;  // we keep track of this property to say whether the user is logged in or not
+      // could do req.session.user = userData; to save it all for the cookie
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
