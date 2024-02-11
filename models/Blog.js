@@ -18,6 +18,19 @@ Blog.init(
     content: {
       type: DataTypes.STRING,
     },
+    comment: {
+      type: DataTypes.STRING,
+    },
+    commentAuthorId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model:"user",
+        key: "id",
+      }
+    },
+    date_comment_created: {
+      type: DataTypes.DATE,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,

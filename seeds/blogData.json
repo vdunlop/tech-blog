@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Tech Shops",
+    "content": "My favorite tech shop is Micro Center in St. Louis Park.",
+    "date_created": "2/7/2024",
+    "user_id": 1
+  },
+  {
+    "title": "Too Many Keyboards",
+    "content": "Let me tell you about my keyboard situation. It all started when my son wanted to get a super cool keyboard that clicks. With every new keyboard comes a used one that wasn't sufficient.",
+    "date_created": "2/8/2024",
+    "user_id": 1
+  },
+  {
+    "title": "Data, data, data",
+    "content": "With the advent of digital everything comes the issue, what to do with all the data. Digital photos, digital contracts, digital music and more...",
+    "date_created": "1/7/2024",
+    "user_id": 1
+  }
+]
