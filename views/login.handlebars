@@ -14,9 +14,16 @@ inside a layout which is the main.handlebars file under the folder layouts -->
         <label for="password-login">Password:</label>
         <input class="form-input" type="password" id="password-login" />
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
+      <section class="form-group2">
+        <div class="form-group2">
+          <button class="btn btn-primary" type="submit">login</button>
+        </div>
+        <!-- this is added and the section above and below -->
+        <div class="form-group2">
+          <button class="btn btn-primary" type="submit">or signup here</button>
+        </div>
+      </section>
+
     </form>
   </div>
   <div class="login-card">
@@ -34,12 +41,20 @@ inside a layout which is the main.handlebars file under the folder layouts -->
         <label for="password-signup">Password:</label>
         <input class="form-input" type="password" id="password-signup" />
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
+      <section class="form-group2">
+        <div class="form-group2">
+          <button class="btn btn-primary" type="submit">signup</button>
+        </div>
+        <!-- this is added and section above -->
+        <div class="form-group2">
+          <button class="btn btn-primary" type="submit">or login here</button>
+        </div>
+      </section>
+
     </form>
   </div>
 </div>
+
 
 <!-- this calls the code to process the login -->
 <script src="./js/login.js"></script>
